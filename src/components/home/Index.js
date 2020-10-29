@@ -169,7 +169,7 @@ export default class Home extends React.Component {
             <Users data={this.state.online} />
           </div>
 
-          <Chat data={this.state.data} />
+          <Chat data={this.state.data} name={this.state.name} />
         </div>
         <div className="container-footer">
           <input

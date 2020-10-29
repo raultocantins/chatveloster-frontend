@@ -146,7 +146,7 @@ color: #fff;
     }
 
 .textarea > ul{
-    width: 100%;
+    width: 90%;
     height: 100%;
     overflow-y: auto;
     margin-top: 15px;
@@ -154,24 +154,26 @@ color: #fff;
     
 
 }
-.textarea>ul> li{
-    background-color: rgba(219, 208, 208, 0.562);
-    margin-left: 20px;
-    margin-right: 20px;
+
+.chatProfile1 {      
+    background-color: rgba(222, 236, 236, 0.596);
+   margin: 20px 20px 0px 20px;
     padding:30px;
     list-style: none;
     text-align: right;
     border-radius: 30px;
     overflow-wrap: break-word;
    
-}
-.textarea>ul> li:nth-child(2n) {
-    text-align: left;
-    background-color:#fff;
-   
-    
   }
-
+  .chatProfile2{
+    text-align: left;
+    background-color:rgba(219, 208, 208, 0.219);    
+    margin: 20px 20px 20px 0px;
+    padding:30px;
+    list-style: none; 
+    border-radius: 30px;
+    overflow-wrap: break-word;   
+  }
 
 .container-footer{
     width: 80%;
