@@ -8,9 +8,7 @@ import socketIOClient from "socket.io-client";
 import Chat from "./Chat";
 import Users from "./Users";
 import Api from "../config/Api";
-const ENDPOINT = "http://localhost:4000";
-const socket = socketIOClient(ENDPOINT);
-
+const socket = socketIOClient(process.env.REACT_APP_API_URL);
 export default class Home extends React.Component {
   state = {
     open: false,

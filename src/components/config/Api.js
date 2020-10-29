@@ -1,6 +1,6 @@
 import Axios from 'axios'
 const Api = Axios.create({
-    baseURL:'https://chatveloster-backend.herokuapp.com/',
+    baseURL:process.env.REACT_APP_API_URL,
     headers: {}
     
 });
