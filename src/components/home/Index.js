@@ -2,8 +2,6 @@ import React from "react";
 import "./Index.css";
 import Send from "../../assets/send.svg";
 import Img from "../../assets/Ellipse 2.png";
-import { AiFillCaretDown } from "react-icons/ai";
-import { AiFillCaretUp } from "react-icons/ai";
 import socketIOClient from "socket.io-client";
 import Chat from "./Chat";
 import Users from "./Users";
@@ -112,66 +110,26 @@ export default class Home extends React.Component {
 
   render() {
     return (
-      <React.Fragment>
-        <div className="container-main">
-          <button className="open" onClick={this.open}>
-            {this.state.open ? <AiFillCaretUp /> : <AiFillCaretDown />}
-          </button>
-          <div className="img-name">
-            <div className="img">
-              <img src={Img} alt="img" />
-            </div>
-            <h4>{!this.state.open ? this.state.name : ""}</h4>
-          </div>
-          <div className="connection">
-            <div>
-              {this.state.open ? (
-                <div className="options">
-                  <input
-                    placeholder="Nickname"
-                    className="input"
-                    value={this.state.nickname}
-                  />
-
-                  <input
-                    placeholder="Email"
-                    className="input"
-                    value={this.state.email}
-                  />
-
-                  <input
-                    placeholder="Password"
-                    className="input"
-                    value={this.state.password}
-                  />
-
-                  <input
-                    placeholder="ConfirmPassword"
-                    className="input"
-                    value={this.state.confirmpassword}
-                  />
-
-                  <button className="btnmain">Send</button>
-                </div>
-              ) : (
-                ""
-              )}
-            </div>
-            <div className="btn">
-              <button className="logout" onClick={this.Logout}>
-                Sair
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="container-content">
+      <React.Fragment>       
+        <div className="box">
+        <div className="aside">
           <div className="users-online">
-            <Users data={this.state.online} />
+          <div className="img-name">           
+          <div className="img" >
+              <img src={Img} alt="img" />            
           </div>
-
-          <Chat data={this.state.data} name={this.state.name} />
+            <h4>{!this.state.open ? this.state.name : ""}</h4>
+          </div>       
+            <Users data={this.state.online} />
+<button onClick={this.Logout} className="logout">Sair</button>
+          </div>
         </div>
-        <div className="container-footer">
+
+
+
+<div className="container-content">
+          <Chat data={this.state.data} name={this.state.name} />
+          <div className="container-footer">
           <input
             placeholder="Digite algo..."
             className="inputmsg"
@@ -182,6 +140,11 @@ export default class Home extends React.Component {
             <img src={Send} alt="send" />
           </button>
         </div>
+
+</div>
+</div>
+
+      
       </React.Fragment>
     );
   }

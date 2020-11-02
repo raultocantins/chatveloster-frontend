@@ -6,8 +6,7 @@ const Users=(props)=>{
 
 return(
 
-    <ul>  
-      <strong>Usuários online</strong>
+    <ul className="listOnline">  
     {
       
 data.map(e=>{

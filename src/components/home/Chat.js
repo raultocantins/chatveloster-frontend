@@ -14,7 +14,7 @@ const Chat = (props) => {
           return (
           <li key={e} className={e[1]===name?'chatProfile1':'chatProfile2'}>                  
           <h3 className="msg">{e[0]} </h3>
-          <h5 className="name">{e[1]} : {e[4]}</h5>
+          <h5 className="name">Enviador por {e[1]}</h5>
           </li>       
           
           )
